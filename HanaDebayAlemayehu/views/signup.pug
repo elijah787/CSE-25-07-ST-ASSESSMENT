@@ -6,8 +6,13 @@ html(lang="en")
     title Signup
     link(rel="stylesheet", href="/css/signup.css")
   body
-    .signup-container
+    .signup-box
       h2 Signup
+      if success 
+        .alert-success
+            | Account created successfully! –
+            a(href="/login") Login
+            span.close &times;
       form(action="/signup", method="POST")
         input(type="text", name="fullName", placeholder="Full Name", required)
         input(type="email", name="email", placeholder="Email", required)

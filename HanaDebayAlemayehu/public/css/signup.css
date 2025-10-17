@@ -4,20 +4,21 @@
   box-sizing: border-box;
 }
 body {
-  background: #f7f8fa;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
+   font-family: 'Poppins', sans-serif;
+  background-color: #f7f8fa;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-.signup-container {
-  background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  width: 90%;
-  max-width: 400px;
+
+.signup-box {
+  /* background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
+  width: 360px;
   text-align: center;
 }
 h2 {

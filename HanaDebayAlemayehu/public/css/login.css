@@ -14,12 +14,12 @@ body {
 }
 
 .login-container {
-  background: #f7f8fa;
+  /* background: #f7f8fa;
   padding: 40px 30px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  width: 90%;
-  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
+  width: 360px;
+  max-width: auto;
   text-align: center;
 }
 
