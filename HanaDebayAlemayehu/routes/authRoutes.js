@@ -9,7 +9,14 @@ router.get("/get-login", (req, res) =>{
 });
 
 
+router.get("/signup", (req, res)=>{
+    res.render("signup")
+});
 
+
+router.get("/sucess", (req,res) => {
+    res.render("sucess-page")
+});
 
 
 
