@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
+// const bcrypt = require("bcrypt");
 const router = express.Router();
+
 
 const User = require("../models/userModel");
 const { error } = require("console");
@@ -34,16 +36,25 @@ router.post("/signup", async (req, res) => {
     if (password !== confirmPassword) {
       return res.render("signup", { error: "Passwords do not match" });
     }
+
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.render("signup", { error: "Email already registered" });
     }
+
+  
     const newUser = new User({
-      fullname: fullName,
+      fullName,
       email,
       phone,
+      password,
+      confirmPassword
     });
+
     await newUser.save();
+
+
+    console.log(" User saved:", newUser);
     res.render("signup", { success: true });
   } catch (err) {
     console.error("Signup Error:", err);
