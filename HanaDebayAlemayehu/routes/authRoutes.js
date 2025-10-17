@@ -52,9 +52,7 @@ router.post("/signup", async (req, res) => {
     });
 
     await newUser.save();
-
-
-    console.log(" User saved:", newUser);
+    // console.log(" User saved:", newUser);
     res.render("signup", { success: true });
   } catch (err) {
     console.error("Signup Error:", err);
